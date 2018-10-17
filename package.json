@@ -1,0 +1,24 @@
+{
+  "name": "react-router-ssr-demo",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/client.js",
+      "server": "server/server.js"
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "7.0.0-beta.55",
+    "history": "^4.7.2",
+    "meteor-node-stubs": "^0.4.1",
+    "react": "^16.5.2",
+    "react-component-caching": "^1.1.1",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  }
+}
