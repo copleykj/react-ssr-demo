@@ -6,8 +6,8 @@
   },
   "meteor": {
     "mainModule": {
-      "client": "client/client.js",
-      "server": "server/server.js"
+      "client": "client/main.js",
+      "server": "server/main.js"
     }
   },
   "dependencies": {
