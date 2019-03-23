@@ -11,14 +11,61 @@
     }
   },
   "dependencies": {
-    "@babel/runtime": "7.0.0-beta.55",
-    "history": "^4.7.2",
+    "@babel/runtime": "^7.4.2",
+    "history": "^4.9.0",
     "meteor-node-stubs": "^0.4.1",
-    "react": "^16.5.2",
-    "react-component-caching": "^1.1.1",
-    "react-dom": "^16.5.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.3",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "prettier": {
+    "printWidth": 120
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "standard-react"
+    ],
+    "rules": {
+      "semi": [
+        2,
+        "always"
+      ],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "react/prop-types": 0
+    },
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "settings": {
+      "import/resolver": {
+        "meteor": {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      }
+    }
   }
 }
