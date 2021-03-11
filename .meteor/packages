@@ -18,3 +18,4 @@ ecmascript@0.15.0              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.5.0            # Server-side component of the `meteor shell` command
 communitypackages:react-router-ssr
 react-meteor-data
+accounts-password
