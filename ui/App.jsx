@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
 import { renderWithSSR } from 'meteor/communitypackages:react-router-ssr';
-import { withTracker } from 'meteor/react-meteor-data';
+import { useTracker } from 'meteor/react-meteor-data';
 
 import React from 'react';
 import { Route } from 'react-router-dom';
@@ -9,7 +9,11 @@ import { Route } from 'react-router-dom';
 import DashboardPage from './pages/dashboard/index';
 import ProfilePage from './pages/profile/index';
 
-const App = ({ user }) => {
+const App = () => {
+  const { user } = useTracker(() => ({
+    user: Meteor.user(),
+  }));
+  console.log(user);
   return (
     <>
       <Route exact path='/' component={DashboardPage} />
@@ -18,8 +22,4 @@ const App = ({ user }) => {
   );
 };
 
-const AppContainer = withTracker(() => ({
-  user: Meteor.user(),
-}))(App);
-
-renderWithSSR(<AppContainer />);
+renderWithSSR(<App />);
